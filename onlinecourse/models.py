@@ -106,7 +106,7 @@ class Question(models.Model):
     # question text
     title = models.CharField(max_length=200, default="Question Title")
     # question grade/mark
-    total_enrollment = models.IntegerField(default=0)
+    grade = models.IntegerField(default=0)
 
     def __str__(self):
             return "Question: " + self.title

@@ -60,11 +60,7 @@
 
             <div id="demo" class="collapse">
                 {% if user.is_authenticated %}
-                    
-                        
-                  
-
-                    <form id="questionform" action="point to a submit view" method="post">
+                    <form id="questionform" action="{% url 'onlinecourse:submit' course.id %}" method="post">
                         {% for question in course.question_set.all %}
                         <div class="card mt-1">
                             <div class="card-header"><h5>{{ question.title}}</h5></div>
